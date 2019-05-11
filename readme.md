@@ -9,3 +9,9 @@ create .env files:
 cp .env.example .env
 cp app/.env.example app/.env
 ```
+
+2. Generate key(into php container)
+
+```bash
+	php artisan key:generate
+```
