@@ -16,7 +16,6 @@ class UsersController extends Controller
 
     public function show(int $id)
     {
-
         return view('users.show', [
             'user' => ($user = \DB::table('users')->find($id))?$user:abort(404)
         ]);
