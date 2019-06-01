@@ -17,5 +17,5 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'users', 'as' => 'users.'],function(){
     Route::get('/', 'UsersController@index')->name('index');
-    Route::get('/{user}', 'UsersController@show')->name('show');
+    Route::get('/{user}', 'UsersController@show')->name('show')->where('user', '\d+');
 });
